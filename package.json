@@ -3,9 +3,7 @@
   "version": "1.0.31A",
   "description": "An app for tracking your music collection",
   "engines": {
-    "node": {
       "node": "8.1.2"
-    }
   },
   "main": "server.js",
   "scripts": {
