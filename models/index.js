@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/tunely_test");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/tunely_test");
 
 var Album = require('./album');
 
