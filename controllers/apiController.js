@@ -9,9 +9,4 @@ function index(req, res) {
   });
 }
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> godify_api
 module.exports.index = index;
