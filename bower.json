@@ -1,14 +1,7 @@
 {
   "name": "tunely",
   "version": "1.0.31A",
-<<<<<<< HEAD
   "homepage": "https://github.com/nzoLogic/music-player",
-=======
-  "homepage": "https://github.com/sf-wdi-31/tunely-angular",
-  "authors": [
-    "GA SF WDI"
-  ],
->>>>>>> godify_api
   "license": "MIT",
   "ignore": [
     "**/.*",
