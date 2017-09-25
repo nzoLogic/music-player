@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/sf-wdi-31/tunely-angular.git"
+    "url": "git+ssh://git@github.com:nzoLogic/music-player.git"
   },
   "author": "GA SF WDI",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sf-wdi-31/tunely-angular/issues"
+    "url": "https://github.com/nzoLogic/music-player"
   },
   "homepage": "https://github.com/sf-wdi-31/tunely-angular#readme",
   "dependencies": {
