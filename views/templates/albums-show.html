@@ -31,33 +31,7 @@
                       <iframe ng-src="{{albumsShowCtrl.album.uri}}"
                        width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
                     </li>
-                    <li class="list-group-item">
-                      <h4 class="inline-header">Songs:</h4>
-                      <div class="list-group-item" ng-repeat="song in albumsShowCtrl.album.songs">
-                          <button class='btn btn-info' ng-hide="editing" ng-click="editing = true"><span class="glyphicon glyphicon-pencil"></span></button>
-                          <button class='btn btn-success' ng-show="editing" ng-click="albumsShowCtrl.editSong(song); editing = false"><span class="glyphicon glyphicon-king"></span></button>
-                          <button class='btn btn-danger' ng-click="albumsShowCtrl.deleteSong(song)"><span class="glyphicon glyphicon-trash"></span></button>
-                        ({{song.trackNumber}})  <span ng-show="!editing">{{song.name}}
-                      </span>
-                        <input type="text" ng-show="editing" ng-model="song.name">
-                      </div>
-                    </li>
                   </ul>
-                  <form class="form-horizontal" ng-submit="albumsShowCtrl.submitSong(albumsShowCtrl.newSong)">
-
-                      <!-- Text input-->
-                      <div class="form-group">
-                        <div class="col-md-4">
-                          <input id="name" placeholder="track number" ng-model="albumsShowCtrl.newSong.trackNumber" type="text" class="form-control input-md" required="">
-                        </div>
-                        <div class="col-md-4">
-                        <input id="name" placeholder="song name" ng-model="albumsShowCtrl.newSong.name" type="text" class="form-control input-md" required="">
-                        </div>
-                        <div class="col-md-4">
-                          <button class="btn btn-primary">Submit</button>
-                        </div>
-                      </div>
-                    </form>
                 </div>
               </div>
             </div>

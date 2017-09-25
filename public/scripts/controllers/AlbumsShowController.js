@@ -70,31 +70,21 @@ function AlbumsShowController($http, $routeParams, $sce) {
             vm.album.songs.push(res.data);
         })
     }
-    //function for gettting spotify album if album doesnt have one
+    // function for gettting spotify album 
     vm.getSpotifyAlbum = function(){
       $http({
           method: 'GET',
           url: spotifyUrl + vm.album.name + type,
-      }).then(function succesfulSpotify(res) {
-        var topPick = res.data.albums.items[0];
-          console.log(topPick);
-          //update album to be used in put route
-        console.log(vm.album)
-          var trustUrl = spotifyEmbed +
-          topPick.uri + userName;
-          // set album.uri and updateAlbum equal to trust url
-          vm.album.uri = $sce.trustAsResourceUrl(trustUrl);
-          vm.album.image = $sce.trustAsResourceUrl(topPick.images[1].url);
-
-          // $http({
-          //   method: 'PUT',
-          //   url: '/api/albums/'+vm.album._id,
-          //   data: updateAlbum
-          // }).then(function(res){console.log(res)});
-      }, function(err) {
-          console.log('err');
-      })
+        }).then(successfulSpotify, handleErr)
     }
 
-
+    function succesfulSpotify(res) {
+      var topPick = res.data.albums.items[0];
+      //update album to be used in put route
+      var trustUrl = spotifyEmbed +
+      topPick.uri + userName;
+      // set album.uri and updateAlbum equal to trust url
+      vm.album.uri = $sce.trustAsResourceUrl(trustUrl);
+      vm.album.image = $sce.trustAsResourceUrl(topPick.images[1].url);
+    }
 }
