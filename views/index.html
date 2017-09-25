@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="tunely">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,6 +17,8 @@
 
     <!-- APPLICATION SCRIPTS -->
     <script src="/scripts/app.js"></script>
+    <script src="/scripts/controllers/AlbumsIndexController.js"></script>
+    <script src="/scripts/controllers/AlbumsShowController.js"></script>
 
   </head>
   <body>
@@ -24,8 +26,11 @@
       <div class="container">
         <h1>Welcome to tunely</h1>
         <p>Your music binder!</p>
+        <a href="/">Home</a>
       </div>
     </div>
+
+    <div ng-view></div>
   </body>
 
 </html>

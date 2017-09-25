@@ -10,7 +10,7 @@ var bodyParser = require('body-parser');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 // need to add this so that we can accept request payloads from Angular
-app.use(bodyParser.json()); 
+app.use(bodyParser.json());
 
 // We'll serve jQuery and bootstrap from a local bower cache avoiding CDNs
 // We're placing these under /vendor to differentiate them from our own assets

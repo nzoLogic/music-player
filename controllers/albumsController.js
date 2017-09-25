@@ -50,7 +50,9 @@ function update(req, res) {
     if(err) { console.log('albumsController.update error', err); }
     foundAlbum.artistName = req.body.artistName;
     foundAlbum.name = req.body.name;
+    foundAlbum.uri = req.body.uri;
     foundAlbum.releaseDate = req.body.releaseDate;
+    foundAlbum.image = req.body.image;
     foundAlbum.save(function(err, savedAlbum) {
       if(err) { console.log('saving altered album failed'); }
       res.json(savedAlbum);
