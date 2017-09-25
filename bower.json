@@ -1,10 +1,7 @@
 {
   "name": "tunely",
   "version": "1.0.31A",
-  "homepage": "https://github.com/sf-wdi-31/tunely-angular",
-  "authors": [
-    "GA SF WDI"
-  ],
+  "homepage": "https://github.com/nzoLogic/music-player",
   "license": "MIT",
   "ignore": [
     "**/.*",
